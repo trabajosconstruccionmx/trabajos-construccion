@@ -149,6 +149,10 @@ footer{border-top:1px solid var(--line);padding:26px 0 90px;color:var(--mut);fon
     <h2 class="tit rv L">Trabajos realizados</h2>
     <p class="sub rv L">Una muestra de lo que hacemos. Toca una foto para verla grande.</p>
     <div class="gal" id="gal"></div>
+    <div class="rv L" style="max-width:400px;margin:26px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden">
+      <video controls preload="none" playsinline poster="videos/poster-1.jpg" src="videos/video-1.mp4" style="width:100%;display:block;background:#000"></video>
+      <p style="padding:12px 16px;font-weight:700;font-size:.95rem">Piso con medallón decorativo, trabajo terminado</p>
+    </div>
   </div>
 </section>
 
@@ -207,12 +211,18 @@ const SERVICIOS = [
   { n: 'Albercas', d: 'Construcción y remodelación de albercas con acabados de calidad.', img: 'img/serv-alberca.jpg' },
 ];
 const GALERIA = [
-  { img: 'img/portada.jpg', t: 'Obra de construcción' },
-  { img: 'img/serv-obra.jpg', t: 'Colado y estructura' },
-  { img: 'img/serv-bano.jpg', t: 'Azulejo en baños' },
-  { img: 'img/serv-cocina.jpg', t: 'Remodelación de cocina' },
-  { img: 'img/serv-escaleras.jpg', t: 'Escaleras de concreto' },
-  { img: 'img/serv-alberca.jpg', t: 'Alberca en construcción' },
+  { img: 'img/trabajo-1.jpg', t: 'Baño con azulejo rojo' },
+  { img: 'img/trabajo-2.jpg', t: 'Piso de mármol en ajedrez' },
+  { img: 'img/trabajo-3.jpg', t: 'Escaleras tipo madera' },
+  { img: 'img/trabajo-4.jpg', t: 'Cocina con cubierta negra' },
+  { img: 'img/trabajo-5.jpg', t: 'Muro de piedra decorativa' },
+  { img: 'img/trabajo-6.jpg', t: 'Piso café brillante' },
+  { img: 'img/trabajo-7.jpg', t: 'Baño con regadera oscura' },
+  { img: 'img/trabajo-8.jpg', t: 'Escaleras de azulejo' },
+  { img: 'img/trabajo-9.jpg', t: 'Detalle de muro de piedra' },
+  { img: 'img/trabajo-10.jpg', t: 'Patio y fachada' },
+  { img: 'img/trabajo-11.jpg', t: 'Colocando muro de piedra' },
+  { img: 'img/trabajo-12.jpg', t: 'Muro de jardín' },
 ];
 const $ = id => document.getElementById(id);
 $('servs').innerHTML = SERVICIOS.map((s, i) => `

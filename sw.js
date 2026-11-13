@@ -1,5 +1,5 @@
 // Trabajos Construcción
-const CACHE = 'trabajos-v3';
+const CACHE = 'trabajos-v4';
 const CORE = ['./', './index.html', './manifest.json', './img/logo-simbolo.png', './img/logo-full.webp', './img/icono.jpg', './img/portada.jpg'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
@@ -12,6 +12,7 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== self.location.origin) return;
+  if (url.pathname.endsWith('.mp4')) return;
   const esClave = e.request.mode === 'navigate' || /\.html($|\?)/.test(url.pathname);
   if (esClave) {
     e.respondWith(fetch(e.request).then(r => {
